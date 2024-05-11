@@ -6,7 +6,7 @@
 
               causeString: 'Triggered on pr merge,
 
-              token: ‘<your-token>’,
+              token: ‘amir123’,
 
               printContributedVariables: true,
               printPostContent: true,
