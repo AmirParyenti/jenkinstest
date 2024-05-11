@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+    triggers {
+        // Configure for pull request events, ensure the plugin supports it
+        GitHubPRTrigger()
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+            }
+        }
+        stage('Deploy') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo 'Deploying to production...'
+            }
+        }
+    }
+}

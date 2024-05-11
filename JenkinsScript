@@ -10,7 +10,7 @@ pipeline {
                 [key: 'merged', value: '$.pull_request.merged']
             ],
             causeString: 'Triggered on pr merge',
-            token: '<your-token>',
+            token: 'http://20.115.55.55:8080/ghprbhook/invoke?token=123',
             printContributedVariables: true,
             printPostContent: true,
             silentResponse: false,
